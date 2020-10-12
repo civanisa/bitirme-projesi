@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row">
+    <div class="col-1 mt-3">
+      <div>
+        <button class="icon-btn add-btn" (click)="add()">
+          <div class="add-icon"></div>
+          <div class="btn-txt">Yeni Kullanıcı Ekle</div>
+        </button>
+      </div>
+    </div>
+    <div class="col-11 mt-3">
+      <h1 class="text-center mat-h1 mt-2">Kullanıcılar Tablosu</h1>
+    </div>
+    <div class="col-12 mt-1 mb-5">
+      <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> Id.</th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Ad & Soyad</th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="username">
+          <th mat-header-cell *matHeaderCellDef> Kullanıcı Adı</th>
+          <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef> E-Mail</th>
+          <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="roles">
+          <th mat-header-cell *matHeaderCellDef> Role</th>
+          <td mat-cell *matCellDef="let element"> {{element.roles[0].name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-icon-button matTooltip="Kullanıcıyı Düzenle" (click)="duzenle(element)">
+              <mat-icon>launch</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" matTooltip="Kullanıcıyı Sil" (click)="delete(element.id)">
+              <mat-icon>delete_outline</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </div>
+</div>
+

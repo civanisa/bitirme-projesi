@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb app-background">
+          <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
+          <li class="breadcrumb-item"><a routerLink="/dashboard/adres-liste">Adres Listesi</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Adres Bilgi</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="col-12">
+      <mat-card>
+        <div class="row">
+          <div class="col-10">
+            <h2>{{data.adi}} Kurumu (Düzenle)</h2>
+          </div>
+          <div class="col-2 mt-2">
+            <button mat-raised-button color="primary" type="button" (click)="update()">Düzenle</button>
+            <button style="margin-left: 5%;" mat-raised-button color="warn" type="button" (click)="delete()">Sil</button>
+          </div>
+          <div class="col-5 mt-3">
+            <img src="../../../../assets/images/adres-image.jpg"/>
+          </div>
+          <div class="col-7  mt-3">
+            <h5>Id'si : {{data.id}}</h5>
+            <h5>Adı : {{data.adi}}</h5>
+            <h5>Telefon No : {{data.kayitBil.telefons[0].telefon}}</h5>
+            <h5>Adresi : {{data.kayitBil.adres[0].adres}}</h5>
+            <h5>Adres Açıklaması : {{data.kayitBil.aciklama}}</h5>
+            <h5>Kordinatları: </h5>
+            <h5 class="ml-4">Lat :  {{data.kayitBil.adres[0].lat}}</h5>
+            <h5 class="ml-4">Lng :  {{data.kayitBil.adres[0].lng}}</h5>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

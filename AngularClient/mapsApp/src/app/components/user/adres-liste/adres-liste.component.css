@@ -1,0 +1,231 @@
+h5{
+  padding-top: 4%;
+}
+i {
+  opacity: 0;
+  font-size: 18px;
+  color: #fff;
+  will-change: transform;
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+h1{
+  font-size: 35px;
+}
+
+h2 {
+  pointer-events: none;
+}
+
+.card-container {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-container .cart {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  width: 550px;
+  height: 225px;
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+.card-container .cart:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  content: "";
+  z-index: 99;
+  position: absolute;
+  top: -10px;
+  left: 32px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  background-color: #E6E5E1;
+}
+.card-container .cart:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  content: "";
+  z-index: 99;
+  position: absolute;
+  bottom: -10px;
+  left: 32px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  background-color: #E6E5E1;
+}
+.card-container .cart ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 99;
+  position: absolute;
+  left: 39px;
+  top: 5px;
+  list-style-type: none;
+}
+.card-container .cart ul li {
+  padding: 0;
+  box-sizing: border-box;
+  width: 2px;
+  height: 2px;
+  border-radius: 2px;
+  margin: 6px 0;
+  background-color: #E6E5E1;
+}
+.card-container .cart h2 {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 99;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  bottom: 0;
+  right: 130px;
+  font-size: 25px;
+  font-weight: 700;
+  color: #fff;
+}
+.card-container .cart .fa-arrow-right {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 100;
+  position: absolute;
+  right: 75px;
+  bottom: 25px;
+  font-size: 40px;
+  cursor: pointer;
+}
+.card-container .cart p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 99;
+  position: absolute;
+  top: 20px;
+  right: 70px;
+  color: #333;
+  opacity: 0.7;
+  font-size: 12px;
+  letter-spacing: 1px;
+  writing-mode: vertical-lr;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.card-container .cart .pic {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 100;
+  width: 450px;
+  height: 225px;
+  background-image: url('src/assets/images/adres-image.jpg');
+  background-size: 100% 100%;
+  filter: grayscale(100%);
+}
+.card-container .cart .social {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: absolute;
+  left: 60px;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 180px;
+  height: 64px;
+  border-radius: 80px;
+}
+.card-container .cart .social i:nth-of-type(1) {
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+.card-container .cart .social i:nth-of-type(2) {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.card-container .cart .social i:nth-of-type(3) {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.card-container .cart .social i:nth-of-type(4) {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+.card-container .cart:hover i {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.card-container .cart button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 30px;
+  height: 30px;
+  background-color: #DA4D1D;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  mix-blend-mode: hard-light;
+}
+.card-container .cart button i {
+  font-size: 3rem;
+}
+.card-container .cart:hover button {
+  transform: scale(16.5);
+}
+.card-container .cart:hover p {
+  color: #fff;
+}
+.card-container .cart:hover .pic {
+  filter: grayscale(0);
+}
+
+.dr {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 100px;
+}
+
+.app-background {
+  border: 1px solid #cdcdcd;
+  background: white;
+}
+
+.social a{
+  cursor: pointer;
+}

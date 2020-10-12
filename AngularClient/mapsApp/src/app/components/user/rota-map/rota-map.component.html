@@ -1,0 +1,90 @@
+<div class="maps-card-r">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <mat-card class="text-center" *ngIf="cardAktif">
+          <p>{{cardAdSoyad}}</p>
+          <p>{{cardAdres}}</p>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="maps-card-l">
+  <div class="container">
+    <div class="row mt-1" *ngFor="let data of cardGuzergah; index as i;">
+      <mat-card class="g-mar-pad-0" [ngClass]="data.bColor" (click)="gClick(i)">
+        <div class="col-12">
+          <span class="g-span g-span-r">#{{i + 1}}</span>
+          <span *ngFor="let item of [0,1,2,3,4,5,6,7,8,9]">
+            <i class="fas fa-user" [ngClass]="data.data[item].style"></i>
+          </span>
+        </div>
+        <div class="col-12">
+          <span class="g-span-button-r">
+            <button class="g-span-button" mat-icon-button matTooltip="Ön İzleme" (click)="gInfo(data)">
+                <mat-icon>launch</mat-icon>
+              </button>
+          </span>
+          <span *ngFor="let item of [10,11,12,13,14,15,16,17,18,19]">
+            <i class="fas fa-user" [ngClass]="data.data[item].style"></i>
+          </span>
+        </div>
+      </mat-card>
+    </div>
+    <div class="row">
+      <div class="col-12 text-center mt-2">
+        <button mat-icon-button style="margin-right: 7%;" (click)="gCardAdd()"><i class="fas fa-plus-circle fa-3x"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="maps-card-r-b">
+  <div class="container">
+    <mat-card style="padding: 3%">
+      <div class="row text-center" *ngIf="eskiKayit">
+        <div class="col-6">
+          <button mat-raised-button color="primary" type="button" (click)="gSaveMap()">Kaydet ve Bitir</button>
+        </div>
+        <div class="col-6">
+          <button mat-raised-button color="primary"  type="button" (click)="gClearMap()">Temizle</button>
+        </div>
+      </div>
+      <div class="row text-center" *ngIf="yeniKayit">
+        <div class="col-6">
+          <button mat-raised-button color="primary"  type="button" (click)="gKayit()">Kayıtlara Git</button>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>
+
+
+<agm-map
+  [latitude]="kordinat[0]"
+  [longitude]="kordinat[1]"
+  [zoom]="kordinat[2]"
+  [disableDefaultUI]="false"
+  [zoomControl]="false">
+  <agm-marker
+    iconUrl="../../../../assets/images/icons/school.png"
+    [latitude]="iKayit.kayitBil.adres[0].lat"
+    [longitude]="iKayit.kayitBil.adres[0].lng">
+  </agm-marker>
+  <agm-marker
+    (mouseOver)="mouseOver(location)"
+    (mouseOut)="mouseOut()"
+    (markerClick)="markerClick(location,i)"
+    [iconUrl]="location.iconUrl"
+    [label]="{text :location.label , fontSize: '20px'}"
+    [latitude]="location[0].kayitBil.adres[0].lat"
+    [longitude]="location[0].kayitBil.adres[0].lng"
+    [openInfoWindow]="location"
+    *ngFor="let location of data; let i = index;">
+  </agm-marker>
+</agm-map>
+
+

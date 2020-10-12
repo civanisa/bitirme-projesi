@@ -1,0 +1,89 @@
+<form class="example-form kulForm">
+  <mat-card>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="text-center mat-h2">Personel Bilgilerini Giriniz.</h2>
+        </div>
+        <div class="col-6">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Ad & Soyad" type="text" [(ngModel)]="adi"
+                   [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+        </div>
+        <div class="col-6">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Telefon" type="text" [(ngModel)]="telefon"
+                   [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+        </div>
+        <div class="col-4">
+          <mat-form-field class="example-full-width">
+            <mat-select placeholder="Mahalle Seçiniz" [(value)]="mahalleId" (selectionChange)="onSelectMahalle()">
+              <mat-option *ngFor="let mahalle of mahhalleler; let i = index" [value]="i">
+                {{mahalle.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-4">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Cadde/Sokak Adı veya No" type="text" [(ngModel)]="adres[1]"
+                   [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+        </div>
+        <div class="col-4">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Apartman Adı veya No" type="text" [(ngModel)]="adres[2]"
+                   [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+        </div>
+        <div class="col-9">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Adres Burada Otomatik Oluşacak"
+                   value="{{adres[0]}} {{adres[1]}} {{adres[2]}} {{sehir}}" type="text" readonly>
+          </mat-form-field>
+        </div>
+        <div class="col-3 mt-3">
+          <button mat-raised-button color="primary" (click)="showLocation()">Kordinat Bul</button>
+        </div>
+        <div class="col-6">
+          <mat-form-field class="example-full-width">
+            <mat-select placeholder="İşyeri & Okul Adresini Seçiniz" [(value)]="iKayitId">
+              <mat-option *ngFor="let iKayit of iKayitData" [value]="iKayit.id">
+                {{iKayit.adi}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-6">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Adres Açıklama" type="text" [(ngModel)]="adresAciklama"
+                   [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+        </div>
+        <div class="col-3">
+          <button mat-raised-button color="primary" type="submit" (click)="addRecord()" [disabled]="disabled">Kaydet</button>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</form>
+
+<agm-map
+  [latitude]="kordinat[0]"
+  [longitude]="kordinat[1]"
+  [zoom]="kordinat[2]"
+  [disableDefaultUI]="false"
+  [zoomControl]="false">
+  <agm-marker
+    [latitude]="location?.lat"
+    [longitude]="location?.lng"
+    [markerDraggable]="true"
+    (dragEnd)="markerDragEnd($event)">
+    <agm-info-window [disableAutoPan]="true">
+      lat : {{location?.lat}} <br> lng : {{location?.lng}}
+    </agm-info-window>
+  </agm-marker>
+  <agm-polygon [paths]="paths" [fillColor]="fillcolor"></agm-polygon>
+</agm-map>

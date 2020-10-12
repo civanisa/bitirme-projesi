@@ -1,0 +1,88 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="text-center">Yeni Mahalle Ekle</h2>
+    </div>
+    <div class="col-12">
+      <form class="example-form" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+        <div class="row">
+          <div class="col-6">
+            <mat-card>
+              <h5 style="margin-left: 3%">Mahalle Bilgileri</h5>
+              <div class="col-12">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Name</mat-label>
+                  <input matInput placeholder="Kümbet" type="text" [(ngModel)]="form.name"
+                         [ngModelOptions]="{standalone: true}" autocomplete="off">
+                </mat-form-field>
+              </div>
+              <div class="col-12">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Lat</mat-label>
+                  <input matInput placeholder="39.8745454" type="text" [(ngModel)]="form.lat"
+                         [ngModelOptions]="{standalone: true}" autocomplete="off">
+                </mat-form-field>
+              </div>
+              <div class="col-12">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Lng</mat-label>
+                  <input matInput placeholder="37.4545478" type="text" [(ngModel)]="form.lng"
+                         [ngModelOptions]="{standalone: true}" autocomplete="off">
+                </mat-form-field>
+              </div>
+              <div class="col-12">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Zomm</mat-label>
+                  <input matInput placeholder="16.5" type="password" [(ngModel)]="form.zoom"
+                         [ngModelOptions]="{standalone: true}" autocomplete="off">
+                </mat-form-field>
+              </div>
+              <div class="col-12">
+                <button mat-raised-button color="primary" type="submit">Kaydet</button>
+                <button style="margin-left: 5%;" mat-raised-button color="primary" type="button">İptal</button>
+              </div>
+            </mat-card>
+          </div>
+          <div class="col-6">
+            <mat-card>
+              <h5 style="margin-left: 3%">Mahalle Kordinatları</h5>
+              <div class="col-12">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Kordinatlar</mat-label>
+                  <textarea matInput style="height: 480px" [(ngModel)]="form.locations"
+                            [ngModelOptions]="{standalone: true}" autocomplete="off"   placeholder="
+[{'lng': 37.0370123,	'lat' :39.768544},
+{'lng': 37.0375704,	'lat' :39.7694544},
+{'lng': 37.0380347,	'lat' :39.770413},
+{'lng': 37.0383216,	'lat' :39.7714133},
+{'lng': 37.0383185,	'lat' :39.7718771},
+{'lng': 37.0383438,	'lat' :39.77233},
+{'lng': 37.0382433,	'lat' :39.7730373},
+{'lng': 37.0383058,	'lat' :39.7737811},
+{'lng': 37.0384603,	'lat' :39.7745303},
+{'lng': 37.0389185,	'lat' :39.7748368},
+{'lng': 37.0389185,	'lat' :39.7748368},
+{'lng': 37.0393521,	'lat' :39.775148},
+{'lng': 37.0394559,	'lat' :39.7752744},
+{'lng': 37.0394488,	'lat' :39.7754528},
+{'lng': 37.0394725,	'lat' :39.7756455},
+{'lng': 37.0395208,	'lat' :39.7758807},
+{'lng': 37.0394942,	'lat' :39.7761832},
+{'lng': 37.0394244,	'lat' :39.7764714},
+{'lng': 37.0396663,	'lat' :39.7767267},
+{'lng': 37.0395964,	'lat' :39.7767989},
+{'lng': 37.0394648,	'lat' :39.776871},
+{'lng': 37.0393866,	'lat' :39.7769775},
+{'lng': 37.0392426,	'lat' :39.7772756},
+{'lng': 37.0398508,	'lat' :39.7782197},
+{'lng': 37.0402468,	'lat' :39.7795271}]
+"></textarea>
+                </mat-form-field>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

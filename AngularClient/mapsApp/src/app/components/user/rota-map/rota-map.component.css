@@ -1,0 +1,142 @@
+agm-map {
+  height: 100vh;
+}
+
+.maps-card-r {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  margin: 5px 0;
+}
+
+.maps-card-l {
+  position: absolute;
+  left: 5%;
+  z-index: 1;
+  margin: 5px 0;
+}
+
+.maps-card-r-b {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  margin: 5px 0;
+}
+
+i {
+  margin-left: 2px;
+}
+
+.g-span {
+  margin-left: -5px;
+  font-weight: bold;
+}
+
+.g-span-r {
+  margin-right: 8px
+}
+
+.g-span-button {
+  height: 10px;
+  width: 10px;
+  margin-left: -10px;
+  margin-top: -5px
+}
+
+.g-span-button-r {
+  margin-right: 20px
+}
+
+/* g Start */
+
+.g-mar-pad-0 {
+  padding: 0;
+  margin: 0;
+}
+
+.g-black {
+  color: black;
+}
+
+.g-red {
+  color: red;
+}
+
+.g-border-red {
+  border: solid 3px red
+}
+
+.g-green {
+  color: green;
+}
+
+.g-border-green {
+  border: solid 3px green;
+}
+
+.g-blue {
+  color: blue;
+}
+
+.g-border-blue {
+  border: solid 3px blue;
+}
+
+.g-yellow {
+  color: yellow;
+}
+
+.g-border-yellow {
+  border: solid 3px yellow;
+}
+
+.g-deeppink {
+  color: deeppink;
+}
+
+.g-border-deeppink {
+  border: solid 3px deeppink;
+}
+
+.g-brown {
+  color: #964b00;
+}
+
+.g-border-brown {
+  border: solid 3px #964b00;
+}
+
+.g-purple {
+  color: #660099;
+}
+
+.g-border-purple {
+  border: solid 3px #660099;
+}
+
+.g-orange {
+  color: orange;
+}
+
+.g-border-orange {
+  border: solid 3px orange;
+}
+
+.g-navy-blue {
+  color: #120A8F;
+}
+
+.g-border-navy-blue {
+  border: solid 3px #120A8F;
+}
+
+.g-jade {
+  color: #00a86b;
+}
+
+.g-border-jade {
+  border: solid 3px #00a86b;
+}
+
+/* g Finish */

@@ -1,0 +1,36 @@
+agm-map {
+   height: 100vh;
+ }
+
+.kulForm {
+  position: absolute;
+  left: 5%;
+  z-index: 1;
+  margin: 5px;
+}
+
+.latlng{
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  margin: 5px;
+  padding: 0;
+  max-width: 225px;
+  min-width: 100px;
+}
+
+.latlng p {
+  margin: 0;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+

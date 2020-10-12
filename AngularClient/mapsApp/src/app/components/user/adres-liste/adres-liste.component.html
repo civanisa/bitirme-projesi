@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb app-background ">
+          <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Adres Listesi</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="col-12 mt-2">
+      <h1 class="text-center display-4 pt-1 mb-4">İşyeri & Okul Adres Listesi</h1>
+    </div>
+    <div class="col-6" *ngFor="let data of adresData">
+      <div class="card-container">
+        <div class="cart">
+          <h2>{{data.adi}}</h2>
+          <i class="fas fa-arrow-right"></i>
+          <p>Harita İçin Tıklayın.</p>
+          <div class="pic"></div>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <div class="social">
+            <a matTooltip="Adres Bilgi" (click)="openProfil(data.id)" >
+              <i class="fas fa-info-circle"></i>
+            </a>
+            <a matTooltip="Kişi Listesi" (click)="openPersonel(data.id,data.adi)">
+              <i class="fas fa-list"></i>
+            </a>
+            <a matTooltip="Yeni Personel Ekle" routerLink="/dashboard/personel-kayit">
+              <i class="fas fa-user-plus"></i>
+            </a>
+            <a  matTooltip="Güzergah Listesi" (click)="openGuzergah(data.id,data.adi)">
+              <i class="fas fa-bus"></i>
+            </a>
+          </div>
+          <button (click)="openMaps(data.id)">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

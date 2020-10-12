@@ -1,0 +1,86 @@
+<nav class="main-menu">
+  <ul routerLinkActive="active">
+    <li>
+      <a routerLink="/dashboard" *ngIf="authority === 'user'">
+        <i class="fa fa-home fa-2x"></i>
+        <span class="nav-text">
+						Dashboard
+					</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="admin" *ngIf="authority === 'admin'">
+        <i class="fa fa-home fa-2x"></i>
+        <span class="nav-text">
+						Dashboard
+					</span>
+      </a>
+    </li>
+    <li class="has-subnav" *ngIf="authority === 'user'">
+      <a routerLink="personel-kayit">
+        <i class="fa fa-user fa-2x"></i>
+        <span class="nav-text">
+						Personel Kayıt
+					</span>
+      </a>
+    </li>
+    <li class="has-subnav" *ngIf="authority === 'admin'">
+      <a routerLink="mahalle-kayit">
+        <i class="fa fa-city fa-2x"></i>
+        <span class="nav-text">
+						Mahhalle Kayıt
+        </span>
+      </a>
+    </li>
+    <li class="has-subnav" *ngIf="authority === 'admin'">
+      <a routerLink="yeni-kayit">
+        <i class="fa fa-user fa-2x"></i>
+        <span class="nav-text">
+						Yeni Kullancı
+        </span>
+      </a>
+    </li>
+    <li class="has-subnav" *ngIf="authority === 'admin'">
+      <a routerLink="kullanıcı-kayitlar">
+        <i class="fa fa-list fa-2x"></i>
+        <span class="nav-text">
+						Kullanıcı Kayıtları
+        </span>
+      </a>
+    </li>
+    <li class="has-subnav" *ngIf="authority === 'user'">
+      <a routerLink="adres-kayit">
+        <i class="fa fa-map-marker fa-2x"></i>
+        <span class="nav-text">
+						Adres Kayıt
+        </span>
+      </a>
+    </li>
+<!--    <li class="has-subnav" *ngIf="authority === 'user'">-->
+<!--      <a routerLink="personel-liste">-->
+<!--        <i class="fa fa-table fa-2x"></i>-->
+<!--        <span class="nav-text">-->
+<!--						Personel Liste-->
+<!--        </span>-->
+<!--      </a>-->
+<!--    </li>-->
+    <li class="has-subnav" *ngIf="authority === 'user'">
+      <a routerLink="adres-liste">
+        <i class="fa fa-table fa-2x"></i>
+        <span class="nav-text">
+						Adres Liste
+        </span>
+      </a>
+    </li>
+  </ul>
+  <ul class="logout">
+    <li>
+      <a (click)="logout()">
+        <i class="fa fa-power-off fa-2x"></i>
+        <span class="nav-text">
+						Logout
+					</span>
+      </a>
+    </li>
+  </ul>
+</nav>

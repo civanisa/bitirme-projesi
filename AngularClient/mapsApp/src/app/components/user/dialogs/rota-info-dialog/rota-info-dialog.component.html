@@ -1,0 +1,22 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Sıra</th>
+    <th scope="col">No.</th>
+    <th scope="col">Adı Soyadı</th>
+    <th scope="col">Telefon</th>
+    <th scope="col">Adres</th>
+    <th scope="col"> Adres Açıklama</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let element of data; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <th>{{element.id}}</th>
+    <th>{{element.adSoyad}}</th>
+    <th>{{element.kayitBil.telefons[0].telefon}}</th>
+    <th>{{element.kayitBil.adres[0].adres}}</th>
+    <th>{{element.kayitBil.aciklama}}</th>
+  </tr>
+  </tbody>
+</table>

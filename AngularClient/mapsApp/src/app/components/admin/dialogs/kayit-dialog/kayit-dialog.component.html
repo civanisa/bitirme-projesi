@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-12 mt-3">
+    <h2 class="text-center">Yeni Kullanıcı Ekle</h2>
+    <form class="example-form" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+      <div class="col-12">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Ad & Soyad" type="text" [(ngModel)]="form.name"
+                 [ngModelOptions]="{standalone: true}" autocomplete="off">
+        </mat-form-field>
+      </div>
+      <div class="col-12">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Kullanıcı Adı" type="text" [(ngModel)]="form.username"
+                 [ngModelOptions]="{standalone: true}" autocomplete="off">
+        </mat-form-field>
+      </div>
+      <div class="col-12">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="E-mail" type="text" [(ngModel)]="form.email"
+                 [ngModelOptions]="{standalone: true}" autocomplete="off">
+        </mat-form-field>
+      </div>
+      <div class="col-12">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Şifre" type="password" [(ngModel)]="form.password"
+                 [ngModelOptions]="{standalone: true}" autocomplete="off">
+        </mat-form-field>
+      </div>
+      <div class="col-12">
+        <mat-form-field>
+          <mat-label>Yetki</mat-label>
+          <mat-select [(value)]="form.roles">
+            <mat-option value="admin">Admin</mat-option>
+            <mat-option value="pm">Misafir</mat-option>
+            <mat-option value="user">Kullanıcı</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-12">
+        <button mat-raised-button color="primary" type="submit" [mat-dialog-close]="form">Kaydet</button>
+        <button style="margin-left: 5%;" mat-raised-button color="primary" type="button" mat-dialog-close="false">
+          İptal
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
