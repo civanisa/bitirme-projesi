@@ -21,6 +21,38 @@ Günümüzde Öğrenci ve Personel taşımacılığı yapan firmaların yaşanan
 Angular cli app klasörü admin, user, dashboard, login ve navigation component’leri oluşturuldu. Navigation component’ine login olan kullanıcının tipine göre admin ve user için ayrı ayrı navigation bölümlerini görüntüleyebilmeleri için oluşturuldu.
 * Navigation’nun admin bölümüne admin-dashboard , kullanıcı kayıtları , mahalle-kayit ve dialogs isimlerinde componentler oluşturuldu. Kullanıcı Kayıtları component’inde uygulamayı kullanacak kullanıcıların kaydı, yetkilendirilmesi ve silinmesi için gerekli kodlamalar yapıldı. Mahalle kayit component’inde uygulamanın user statüsündeki kullanıcıları için kaydı alınacak iş yeri ve ev adresleri için mahalle sınırlarının çizimi için gerekli verilerin alınıp uygulamaya kaydı sağlandı. Dialogs component’inde ise diğer component’lerin çalışması için gerekli alt component’ler oluşturulup kodlandı. 
 * Navigation’nun user bölümde adres-bilgi, adres-kayit, adres-liste, dashboard-user, dialogs, güzergâh-liste, personel-kayit, personel-liste ve rota map isimlerinde componentler oluşturuldu ve gerekli tüm kodlamalar yapılıp test edildi.
- 
+
+## Ekran Resimleri
+### Ana sayfa
+![image](https://user-images.githubusercontent.com/65366156/102689449-438a1e80-420f-11eb-8132-53ef13590ec9.png)
+### Login Sayfası
+![image](https://user-images.githubusercontent.com/65366156/102689468-7207f980-420f-11eb-8009-cb01a2717453.png)
+### Admin – Kullanıcılar Sayfası
+![image](https://user-images.githubusercontent.com/65366156/102689477-7d5b2500-420f-11eb-8a57-7dfaecbe2da8.png)
+### Admin – Kullanıcı Güncelleme Sayfası
+![image](https://user-images.githubusercontent.com/65366156/102689487-89df7d80-420f-11eb-8595-2677b9634cdb.png)
+### Admin – 	Mahalle Kayıt Sayfası
+![image](https://user-images.githubusercontent.com/65366156/102689491-9368e580-420f-11eb-8949-cf1a855864ae.png)
+### Öğrenci & Personel Kayıt Sayfası
+![image](https://user-images.githubusercontent.com/65366156/102689506-b398a480-420f-11eb-9ddb-b190685be080.png)
+###  Adres & İş Yeri Kayıt Sayfası
+![image](https://user-images.githubusercontent.com/65366156/102689540-f5c1e600-420f-11eb-8a31-d9e7a6afe8e8.png)
+### Adres Liste Sayfası
+![image](https://user-images.githubusercontent.com/65366156/102689548-01151180-4210-11eb-9d2a-cbe750fe3d46.png)
+### Adres Bağlı Personel Sayfası
+![image](https://user-images.githubusercontent.com/65366156/102689552-0a9e7980-4210-11eb-96d0-aca6c20c6e22.png)
+### Adres Bağlı Personel Sayfası
+![image](https://user-images.githubusercontent.com/65366156/102689556-1427e180-4210-11eb-9cba-473c90844f32.png)
+### Personel Güncelleme Sayfası
+![image](https://user-images.githubusercontent.com/65366156/102689562-2144d080-4210-11eb-82c0-7c6b3905cf19.png)
+### Güzergâh Oluşturma Sayfası
+![image](https://user-images.githubusercontent.com/65366156/102689567-2d309280-4210-11eb-9a93-c89aa5c436b7.png)
+### Güzergâh Ön İzleme Sayfası
+![image](https://user-images.githubusercontent.com/65366156/102689575-37529100-4210-11eb-89ae-8527918ba48b.png)
+### Güzergâh Liste Sayfası 
+![image](https://user-images.githubusercontent.com/65366156/102689583-45081680-4210-11eb-8d18-6ff0036cbccc.png)
+### Adres Güncelleme Sayfası
+![image](https://user-images.githubusercontent.com/65366156/102689588-4d605180-4210-11eb-921a-a0de03d0d38c.png)
+
 
  
