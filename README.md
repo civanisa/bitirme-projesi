@@ -1,4 +1,4 @@
-# JAVA WEB SERVİS MİMARİSİ VE TASARIM MODELLERİ (Bitirme-Projesi)
+# JAVA WEB SERVİS MİMARİSİ VE TASARIM MODELLERİ
 ## Öğrenci ve Personel Taşımacılık
 ### Özet Bilgi
 Günümüzde Öğrenci ve Personel taşımacılığı yapan firmaların yaşanan teknolojik gelişmeler, artan firmalar arası rekabet, firmaları Öğrenci ve Personel taşımacılığı konusunda yeni stratejiler geliştirmekte, yeni kalite ve yönetim sistemlerine geçiş yapmaktadırlar. Böylece işletme performansı ve verimliliğini artırarak rekabet avantajı sağlayabilmektedirler. Öğrenci ve Personel taşımacılığı çalışmalarını kolaylaştırmak için Öğrenci-Personel ve Servis şoför kaydı yapan, bu kayıtları düzenleyerek Servis şoförlerine kimi nereye hangi saatte hangi sıra ile taşınacağı belgeleri java web servis mimarisi olan mikro servisler ve javascript frameworklerinden olan Angular js ile el ile düzenleme olanağı sunacak uygulama gerçekleştirilmiştir.
