@@ -48,7 +48,7 @@ http://url-site:8070/api/kullanici-service/i-kayit </br>
 http://url-site:8070/api/guzergah-service/guzergah </br>
 ![image](https://user-images.githubusercontent.com/65366156/103134633-b38f1d80-46c3-11eb-81d1-7f4a2c32b33c.png)
 
-## Angular Componentleri
+## Angular JS Componentler
 ### Admin
 ![image](https://user-images.githubusercontent.com/65366156/103134661-db7e8100-46c3-11eb-8a21-57d33528c58f.png)
 ### User
