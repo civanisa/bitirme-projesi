@@ -23,17 +23,36 @@ Angular cli app klasörü admin, user, dashboard, login ve navigation component�
 * Navigation’nun user bölümde adres-bilgi, adres-kayit, adres-liste, dashboard-user, dialogs, güzergâh-liste, personel-kayit, personel-liste ve rota map isimlerinde componentler oluşturuldu ve gerekli tüm kodlamalar yapılıp test edildi.
 
 ## Mikro Servisler
-1 – EurekaServer -> Tüm servisleri bir arada tutan mikro servis
-2 – GuzergahServer -> Güzergâh bilgilerin tutan mikro servis
-3 – KullaniciServer -> Kullanıcı bilgilerini tutan mikro servis
-4 – MahalleService -> Mahalle sınırlarını tutan mikro servis
-5 – ZuulService -> Tüm Yönlendirmeleri yapan mikro servis (Gateway)
+1 - EurekaServer -> Tüm servisleri bir arada tutan mikro servis </br>
+2 – GuzergahServer -> Güzergâh bilgilerin tutan mikro servis </br>
+3 – KullaniciServer -> Kullanıcı bilgilerini tutan mikro servis </br>
+4 – MahalleService -> Mahalle sınırlarını tutan mikro servis </br>
+5 – ZuulService -> Tüm Yönlendirmeleri yapan mikro servis (Gateway) </br>
 
 ## Restful Servisleri
 
+### Authorization
+![image](https://user-images.githubusercontent.com/65366156/103134681-0ff23d00-46c4-11eb-9537-1e8a8249cb8d.png)
+![image](https://user-images.githubusercontent.com/65366156/103134680-0d8fe300-46c4-11eb-907f-6a227bd268a8.png)
+
 ### Mahalle Servisi
-http://url-site:8070/api/mahalle-service/mahalle
+http://url-site:8070/api/mahalle-service/mahalle </br>
 ![image](https://user-images.githubusercontent.com/65366156/103134534-cf45f400-46c2-11eb-9baa-a9b66c599211.png)
+### Kullanıcı Servis -> pkayit
+http://url-site:8070/api/kullanici-service/p-kayit </br>
+![image](https://user-images.githubusercontent.com/65366156/103134615-8f334100-46c3-11eb-956d-fe84da3b9e9c.png)
+### Kullanıcı Servis -> ikayit
+http://url-site:8070/api/kullanici-service/i-kayit </br>
+![image](https://user-images.githubusercontent.com/65366156/103134626-a2461100-46c3-11eb-9419-15a0542a4505.png)
+### Güzergâh Servis -> guzergahlar
+http://url-site:8070/api/guzergah-service/guzergah </br>
+![image](https://user-images.githubusercontent.com/65366156/103134633-b38f1d80-46c3-11eb-81d1-7f4a2c32b33c.png)
+
+## Angular Componentleri
+### Admin
+![image](https://user-images.githubusercontent.com/65366156/103134661-db7e8100-46c3-11eb-8a21-57d33528c58f.png)
+### User
+![image](https://user-images.githubusercontent.com/65366156/103134666-e3d6bc00-46c3-11eb-9a9d-d4614fa93cc4.png)
 
 ## Ekran Resimleri
 ### Ana sayfa
