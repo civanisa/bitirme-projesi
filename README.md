@@ -22,6 +22,9 @@ Angular cli app klasörü admin, user, dashboard, login ve navigation component�
 * Navigation’nun admin bölümüne admin-dashboard , kullanıcı kayıtları , mahalle-kayit ve dialogs isimlerinde componentler oluşturuldu. Kullanıcı Kayıtları component’inde uygulamayı kullanacak kullanıcıların kaydı, yetkilendirilmesi ve silinmesi için gerekli kodlamalar yapıldı. Mahalle kayit component’inde uygulamanın user statüsündeki kullanıcıları için kaydı alınacak iş yeri ve ev adresleri için mahalle sınırlarının çizimi için gerekli verilerin alınıp uygulamaya kaydı sağlandı. Dialogs component’inde ise diğer component’lerin çalışması için gerekli alt component’ler oluşturulup kodlandı. 
 * Navigation’nun user bölümde adres-bilgi, adres-kayit, adres-liste, dashboard-user, dialogs, güzergâh-liste, personel-kayit, personel-liste ve rota map isimlerinde componentler oluşturuldu ve gerekli tüm kodlamalar yapılıp test edildi.
 
+## Veri Tabanı Modeli
+![image](https://user-images.githubusercontent.com/65366156/103134751-7b3c0f00-46c4-11eb-9555-834de30ffcac.png)
+
 ## Mikro Servisler
 1 - EurekaServer -> Tüm servisleri bir arada tutan mikro servis </br>
 2 – GuzergahServer -> Güzergâh bilgilerin tutan mikro servis </br>
