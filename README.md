@@ -1,6 +1,6 @@
 # JAVA WEB SERVİS MİMARİSİ VE TASARIM MODELLERİ
 ## Öğrenci ve Personel Taşımacılık
-### Özet Bilgi
+### Özet
 Günümüzde Öğrenci ve Personel taşımacılığı yapan firmaların yaşanan teknolojik gelişmeler, artan firmalar arası rekabet, firmaları Öğrenci ve Personel taşımacılığı konusunda yeni stratejiler geliştirmekte, yeni kalite ve yönetim sistemlerine geçiş yapmaktadırlar. Böylece işletme performansı ve verimliliğini artırarak rekabet avantajı sağlayabilmektedirler. Öğrenci ve Personel taşımacılığı çalışmalarını kolaylaştırmak için Öğrenci-Personel ve Servis şoför kaydı yapan, bu kayıtları düzenleyerek Servis şoförlerine kimi nereye hangi saatte hangi sıra ile taşınacağı belgeleri java web servis mimarisi olan mikro servisler ve javascript frameworklerinden olan Angular js ile el ile düzenleme olanağı sunacak uygulama gerçekleştirilmiştir.
 ## MATERYAL VE YÖNTEM
 ### MATERYAL
@@ -21,6 +21,19 @@ Günümüzde Öğrenci ve Personel taşımacılığı yapan firmaların yaşanan
 Angular cli app klasörü admin, user, dashboard, login ve navigation component’leri oluşturuldu. Navigation component’ine login olan kullanıcının tipine göre admin ve user için ayrı ayrı navigation bölümlerini görüntüleyebilmeleri için oluşturuldu.
 * Navigation’nun admin bölümüne admin-dashboard , kullanıcı kayıtları , mahalle-kayit ve dialogs isimlerinde componentler oluşturuldu. Kullanıcı Kayıtları component’inde uygulamayı kullanacak kullanıcıların kaydı, yetkilendirilmesi ve silinmesi için gerekli kodlamalar yapıldı. Mahalle kayit component’inde uygulamanın user statüsündeki kullanıcıları için kaydı alınacak iş yeri ve ev adresleri için mahalle sınırlarının çizimi için gerekli verilerin alınıp uygulamaya kaydı sağlandı. Dialogs component’inde ise diğer component’lerin çalışması için gerekli alt component’ler oluşturulup kodlandı. 
 * Navigation’nun user bölümde adres-bilgi, adres-kayit, adres-liste, dashboard-user, dialogs, güzergâh-liste, personel-kayit, personel-liste ve rota map isimlerinde componentler oluşturuldu ve gerekli tüm kodlamalar yapılıp test edildi.
+
+## Mikro Servisler
+1 – EurekaServer -> Tüm servisleri bir arada tutan mikro servis
+2 – GuzergahServer -> Güzergâh bilgilerin tutan mikro servis
+3 – KullaniciServer -> Kullanıcı bilgilerini tutan mikro servis
+4 – MahalleService -> Mahalle sınırlarını tutan mikro servis
+5 – ZuulService -> Tüm Yönlendirmeleri yapan mikro servis (Gateway)
+
+## Restful Servisleri
+
+### Mahalle Servisi
+http://url-site:8070/api/mahalle-service/mahalle
+![image](https://user-images.githubusercontent.com/65366156/103134534-cf45f400-46c2-11eb-9baa-a9b66c599211.png)
 
 ## Ekran Resimleri
 ### Ana sayfa
